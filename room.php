@@ -6,19 +6,28 @@
 	$img = x::url_theme() . '/img';
 	date_default_timezone_set('Asia/Seoul');
 	error_reporting( E_ALL ^ E_NOTICE );
+	
+	$url_node_media_server = config("url_node_media_server");
+	if ( empty( $url_node_media_server ) ) $url_node_media_server = "https://ontue.com:8443";
 ?>
-
-<script src="https://ontue.com/~videochatserver/video-chat-server.js"></script>
-<!--link rel="stylesheet" href="https://ontue.com/~videochatserver/basic.css"-->
+<script>
+/**
+ *  @warning The code below must be set proper media server.
+ *  @warning 아래의 설정은 미디어 서버를 지정하는 것입니다. 올바른 미디어 서버 주소를 입력하셔야 합니다.
+ */
+var $url_node_server	= "<?=$url_node_media_server?>";
+</script>
+<script src="<?=x::url()?>/module/video-chat-server/video-chat-server.js"></script>
+<!--link rel="stylesheet" href="<?=x::url()?>/module/video-chat-server/basic.css"-->
 <link rel="stylesheet" href="<?=x::url_theme()?>/css/room.css">
 <script>
 /**
  *  @warning The code below is necessary.
- *  @warning 아래의 코드는 필수적으로 사용되는 코드입니다.
+ *  @warning 본 항목의 코드는 필수입니다.
  */
 $(function(){
 	x_enter_room(
-		 {
+		{
 			'room_name' : "<?=$_GET['room_name']?>",
 			'user_name' : '<?=$_GET['user_name']?>',
 			'perspective' : null,
@@ -27,14 +36,13 @@ $(function(){
 	);
 });
 </script>
+
 <script>
 /**
  *  @note the code below is option.
  *  @note 아래의 코드(들)는 옵션입니다. 보기 좋게 하기 위해서 꾸미는 것입니다.
  */
 $(function(){
-	
-	
 	var url_home = "<?=g::url()?>";
 	var enablevid = true;
 	var enablemic = true;
