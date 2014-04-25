@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<config>
+	<id>theme video-chat</id>
+	<type>theme</type>
+	<view>pc,mobile</view>
+	<category>community</category>
+	<name>
+		<en>Video Chat, Whiteboard</en>
+		<ko>화상채팅, 전자칠판</ko>
+	</name>
+	<version>0.4</version>
+	<author>JaeHo Song</author>
+	<email>thruthesky@gmail.com</email>
+	<short>
+		<en>This video chat can be used for video communication. It provides white board and chatting box.</en>
+		<ko>화상 통신을 위한 것으로 채팅과 전자칠판을 지원합니다. 온라인 화상 교육이나 가족간의 화상 통신에 사용하면 좋습니다.</ko>
+	</short>
+	<detail>
+		<en></en>
+		<ko></ko>
+	</detail>
+	<menu>
+		<top>
+			<name>
+				<en>Menu Top</en>
+				<ko>상단 톱 메뉴</ko>
+			</name>
+			<max>0</max>
+		</top>
+		<left>
+			<name>
+				<en>Menu Left</en>
+				<ko>왼쪽 메뉴</ko>
+			</name>
+			<max>0</max>
+		</left>
+		<right>
+			<name>
+				<en>Menu Right</en>
+				<ko>오른쪽 메뉴</ko>
+			</name>
+			<max>0</max>
+		</right>
+		<bottom>
+			<name>
+				<en>Menu Bottom</en>
+				<ko>하단 메뉴</ko>
+			</name>
+			<max>0</max>
+		</bottom>
+	</menu>
+</config>
