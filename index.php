@@ -69,7 +69,12 @@
 		</td>
 		</tr>
 	</table>	
-		<div class='footer'>© COPYRIGHT 2014 DOMAIN.COM</div>
+		<div class='footer'>
+			© COPYRIGHT 2014 DOMAIN.COM
+			<? if ( admin() ) { ?>
+			
+			<? } ?>
+		</div>
 	</div>
 </center>
 </div>
@@ -89,3 +94,6 @@
 	}
 </style>
 <![endif]-->
+
+
+
