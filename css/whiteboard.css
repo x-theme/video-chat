@@ -1,0 +1,90 @@
+#video-chat #right{
+	clear:both;
+}
+
+#video-chat #right #whiteboard {
+	width:100%!important;
+	overflow:hidden;	
+}
+
+#video-chat #right #whiteboard  .menu-content{
+	position:absolute;
+	top:40px;
+	left:.5%;	
+	/*height:90%;
+	width:98%;
+	margin:auto;
+	background-color:white;*/
+}
+
+#video-chat #right #whiteboard  .menu-content.input-text{	
+	/*height:22px!important;
+	width:212px!important;
+	margin:0;
+	background-color:transparent;*/
+}
+
+#video-chat #right #whiteboard  .menu-content .web{	
+		
+}
+
+#video-chat #right #whiteboard  .menu-content .web iframe{	
+	
+	
+}
+
+#video-chat #right #whiteboard  .menu-wrapper{
+	margin-bottom:10px;
+}
+
+#video-chat #right #whiteboard  .menu-wrapper ul{
+	padding:0;
+	margin:0;
+	list-style:none;
+}
+
+#video-chat #right #whiteboard .menu-wrapper ul li{
+	display: inline-block;
+	border: 1px solid #d5d5d5;
+	cursor: pointer;
+	text-align: center;
+	height: 20px;
+	width: 20px;
+	overflow: hidden;
+	color: #86786d;
+	font-size: 9pt;
+	line-height: 20px;
+	border-radius: 3px;
+	background-color: white;
+}
+
+#video-chat #right #whiteboard .menu .font-size {
+width: 40px;
+overflow: hidden;
+}
+
+#video-chat #right  #whiteboard .menu .font-size select {
+	color: #86786d;	
+	width: 65px;
+	border: 0;
+	font-size: 9pt;
+	height: 30px;
+	position: relative;
+	top: -5px;
+	left: -2px;
+	padding-left: 5px;
+}
+
+
+#video-chat #right #whiteboard .menu-wrapper ul li img{
+	width:100%;
+}
+
+#video-chat #right #whiteboard .canvas-wrapper{
+	width:100%;
+}
+
+#video-chat #right #whiteboard .no-vid.notice{
+	left:0!important;	
+	right:none;	
+}

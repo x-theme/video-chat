@@ -11,6 +11,7 @@
 <script src="https://ontue.com/~videochatserver/video-chat-server.js"></script>
 <!--link rel="stylesheet" href="https://ontue.com/~videochatserver/basic.css"-->
 <link rel="stylesheet" href="<?=x::url_theme()?>/css/room.css">
+<link rel="stylesheet" href="<?=x::url_theme()?>/css/whiteboard.css">
 <script>
 /**
  *  @warning The code below is necessary.
@@ -197,8 +198,18 @@ $(function(){
 		}
 		$('.room-settings .triangle').toggle();
 		$('.room-settings-content').toggle();
-	});
+	});	
 	
+	
+	/*canvas*/
+	if( $("#canvas").length ){		
+		$("#canvas")[0].width = 2000;		
+	}
+	$("li.text-book").click(function(){
+	
+			$("#canvas .menu-content").css("width","100%");		
+	});	
+	/****/
 });
 
 /**
@@ -244,7 +255,7 @@ function callback_chat_message_received(id, message )
 <div class='headerfield'>
 	<div id='withcenter-vc-header'>
 			<div class='icon'><a href='<?=$homeURL?>'><img src='<?=$img?>/icon.png'></a></div>
-			<div class='menu'>
+			<div class='video_chat_menu'>
 				<a href='<?=$homeURL?>' class='link home'><img src='<?=$img?>/home.png'>HOME</a>
 				<a href='#' class='link about'><img src='<?=$img?>/about.png'>ABOUT</a>
 				<a href='#' class='link terms'><img src='<?=$img?>/terms.png'>TERMS</a>

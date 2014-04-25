@@ -8,7 +8,7 @@
 	<div class='headerfield'>
 		<div id='withcenter-vc-header'>
 				<div class='icon'><img src='<?=$img?>/icon.png'></div>
-				<div class='menu'>
+				<div class='video_chat_menu'>
 					<a href='#' class='link home'><img src='<?=$img?>/home.png'><?=lang("HOME")?></a>
 					<a href='#' class='link about'><img src='<?=$img?>/about.png'><?=lang("ABOUT")?></a>
 					<a href='#' class='link terms'><img src='<?=$img?>/terms.png'><?=lang("TERMS")?></a>
