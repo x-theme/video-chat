@@ -17,20 +17,21 @@
 	background-color:white;*/
 }
 
-#video-chat #right #whiteboard  .menu-content.input-text{	
-	/*height:22px!important;
-	width:212px!important;
-	margin:0;
-	background-color:transparent;*/
+#video-chat #right #whiteboard  .menu-content.menu_text_book{	
+	height:98%;
+	width:98%;
+	margin:auto;
+	background-color:white;
 }
 
 #video-chat #right #whiteboard  .menu-content .web{	
-		
+	width:100%;
+	height:100%;
 }
 
 #video-chat #right #whiteboard  .menu-content .web iframe{	
-	
-	
+	width:100%;
+	height:100%;	
 }
 
 #video-chat #right #whiteboard  .menu-wrapper{
