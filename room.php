@@ -211,7 +211,7 @@ $(function(){
 	
 	/*canvas*/
 	if( $("#canvas").length ){		
-		$("#canvas")[0].width = 2000;		
+		$("#canvas")[0].width = 960;		
 	}
 	$("li.text-book").click(function(){
 	
