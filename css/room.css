@@ -8,7 +8,7 @@ img{
 }
 
 #content {	
-	background-image:url('img/background.png');
+	background-image:url('../img/background.png');
 	min-height: 768px!important;	
 }
 
@@ -139,6 +139,7 @@ img{
 #content .top-menu .room-settings .room-settings-content .do-command{
 	height:60px;
 	width:60px;
+	cursor:pointer;
 }
 
 #content .top-menu .room-settings .room-settings-content .leave{
@@ -147,7 +148,7 @@ img{
 	left:0;
 	background-repeat:no-repeat;	
 	background-position:center;
-	background-image:url('img/leave-conversation.png');
+	background-image:url('../img/leave-conversation.png');
 }
 
 #content .top-menu .room-settings .room-settings-content .tooltip{
@@ -196,11 +197,11 @@ img{
 }
 
 #content .top-menu .room-settings .room-settings-content .camera.on{
-	background-image:url('img/toggle-camera.png');
+	background-image:url('../img/toggle-camera.png');
 }
 
 #content .top-menu .room-settings .room-settings-content .camera.off{
-	background-image:url('img/toggle-camera-off.png');
+	background-image:url('../img/toggle-camera-off.png');
 }
 
 
@@ -214,11 +215,11 @@ img{
 }
 
 #content .top-menu .room-settings .room-settings-content .sound.on{
-	background-image:url('img/sound.png');
+	background-image:url('../img/sound.png');
 }
 
 #content .top-menu .room-settings .room-settings-content .sound.off{
-	background-image:url('img/sound-off.png');
+	background-image:url('../img/sound-off.png');
 }
 
 #content .top-menu .share-url{
@@ -301,7 +302,7 @@ img{
 	margin:5px 10px 8px 10px;	
 	min-height:25px;
 	background-repeat:no-repeat;
-	background-image:url('img/user-icon.png');
+	background-image:url('../img/user-icon.png');
 }
 
 #chat-box form.chat{
@@ -331,7 +332,7 @@ img{
 	background-color:#96b2bc;
 	background-repeat:no-repeat;	
 	background-position:center; 
-	background-image:url('img/enter-arrow.png');
+	background-image:url('../img/enter-arrow.png');
 	height:31px;
 }
 
@@ -352,7 +353,7 @@ img{
 	width:17..25%;
 	border-right:1px solid #9bb6bf;
 	border-bottom:1px solid #9bb6bf;
-	background-image:url('img/left.png');
+	background-image:url('../img/left.png');
 	position:relative;
 }
 
@@ -382,7 +383,7 @@ img{
 	width:50px;
 	height:50px;
 	background-color: #bed2d9;
-	background-image:url('img/sound_2.png');
+	background-image:url('../img/sound_2.png');
 }
 
 #chat-box  #chat-settings .left.settings .camera-chat{
@@ -391,7 +392,7 @@ img{
 	width:50px;
 	height:50px;
 	background-color: #bed2d9;
-	background-image:url('img/camera_2_off.png');
+	background-image:url('../img/camera_2_off.png');
 }
 
 #chat-box  #chat-settings .left.settings .leave-chat{
@@ -400,20 +401,20 @@ img{
 	width:50px;
 	height:50px;
 	background-color: #bed2d9;
-	background-image:url('img/leave_2.png');
+	background-image:url('../img/leave_2.png');
 }
 
 #chat-box #chat-settings .middle.settings{	
 	width:65.25%;
 	border-bottom:1px solid #9bb6bf;
-	background-image:url('img/middle.png');
+	background-image:url('../img/middle.png');
 }
 
 #chat-box  #chat-settings .member-list.settings{	
 	width:17.5%;
 	border-left:1px solid #9bb6bf;
 	border-bottom:1px solid #9bb6bf;
-	background-image:url('img/right.png');
+	background-image:url('../img/right.png');
 }
 
 #chat-box  #chat-settings .member-list.settings #guests{

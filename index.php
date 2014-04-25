@@ -1,41 +1,32 @@
-<!doctype html>
-<html>
-<head>
-	<title>Withcenter Video Chat</title>
-	<meta charset='utf-8'>
-	<meta name='viewport' content='width=device-width, user-scalable=no'>
-	<!--[if lt IE 9]>
-		<script type='text/javascript' src='//code.jquery.com/jquery-1.11.0-beta3.js'></script>
-	<![endif]-->
-	<!--[if gte IE 9]><!-->
-		<script type='text/javascript' src='//code.jquery.com/jquery-2.1.0-beta3.js'></script>
-	<!--<![endif]-->
-	<link rel="stylesheet" href="custom.css">
-</head>
-<body>
+<?php
+	$img = x::url_theme() . '/img';
+?>
+<link rel="stylesheet" href="<?=x::url_theme()?>/css/lobby.css">
+
 <center>
 	<div id='withcenter-video-chat'>
 	<div class='headerfield'>
 		<div id='withcenter-vc-header'>
-				<div class='icon'><img src='img/icon.png'></div>
+				<div class='icon'><img src='<?=$img?>/icon.png'></div>
 				<div class='menu'>
-					<a href='#' class='link home'><img src='img/home.png'>HOME</a>
-					<a href='#' class='link about'><img src='img/about.png'>ABOUT</a>
-					<a href='#' class='link terms'><img src='img/terms.png'>TERMS</a>
-					<a href='#' class='link support'><img src='img/support.png'>SUPPORT</a>
+					<a href='#' class='link home'><img src='<?=$img?>/home.png'><?=lang("HOME")?></a>
+					<a href='#' class='link about'><img src='<?=$img?>/about.png'><?=lang("ABOUT")?></a>
+					<a href='#' class='link terms'><img src='<?=$img?>/terms.png'><?=lang("TERMS")?></a>
+					<a href='#' class='link support'><img src='<?=$img?>/support.png'><?=lang("SUPPORT")?></a>
 				</div>
 			</div>
 	</div>	
-		<form class='class-room' action='room.php'>
-			<!--<img src='img/group.png'>-->
-			<input id='input-room-name' type='text' name='room_name' value='' placeholder='Name the conversation' autocomplete="off">
+		<form class='class-room' action='?'>
+			<input type="hidden" name="page" value="room">
+			<input id='input-room-name' type='text' name='room_name' value='' placeholder='<?=lang("ROOM NAME")?>' autocomplete="off">
+			<input id='input-user-name' type='text' name='user_name' value='' placeholder='<?=lang("USER NAME")?>' autocomplete="off">
 			<input id='start-to-join' type='submit' value='Start!'>
 		</form>
 	<table id='get-pro-box-container' cellpadding=0 cellspacing=0>
 	<tr valign='top'>
 		<td>
 			<div class='easy-to-use get-pro-box'>
-				<div class='img-holder'><img src='img/wrench.png'></div>
+				<div class='img-holder'><img src='<?=$img?>/wrench.png'></div>
 				<div class='text'>
 					<span class='title'>
 					Easy To Use
@@ -50,7 +41,7 @@
 		<td class='space'></td>
 		<td>
 			<div class='easy-to-use get-pro-box'>
-			<div class='img-holder'><img src='img/gift.png'></div>
+			<div class='img-holder'><img src='<?=$img?>/gift.png'></div>
 			<div class='text'>
 				<span class='title'>
 				Free To Use
@@ -65,7 +56,7 @@
 		<td class='space'></td>
 		<td>
 		<div class='easy-to-use get-pro-box'>
-			<div class='img-holder'><img src='img/paint.png'></div>
+			<div class='img-holder'><img src='<?=$img?>/paint.png'></div>
 				<div class='text'>
 					<span class='title'>
 					Fun To Use
@@ -82,8 +73,7 @@
 	</div>
 </center>
 </div>
-</body>
-</html>
+
 
 <!--[if IE 7]>
 <style>

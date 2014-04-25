@@ -1,6 +1,8 @@
 body {
 	margin:0;
 	padding:0;	
+	
+	background-image:url('../img/background.png');
 }
 
 img{
@@ -9,7 +11,7 @@ img{
 
 /*****FOR INDEX.HTML*****/
 #withcenter-video-chat{	
-	background:url('img/background.png');
+	background:url('../img/background.png');
 }
 
 #withcenter-video-chat .headerfield{	
@@ -85,7 +87,6 @@ img{
 #withcenter-video-chat form.class-room{	
 	width:90%;
 	max-width:397px;
-	max-height:100px;
 	margin:83px 0 11px 0;
 	background-color:#96b2bc;	
 	position:relative;
@@ -98,7 +99,9 @@ img{
 	margin:0;
 }
 
-#withcenter-video-chat form.class-room input#input-room-name{	
+#withcenter-video-chat form.class-room input#input-room-name,
+#withcenter-video-chat form.class-room input#input-user-name
+{	
 	width:81.8%;
 	border:1px solid #697c83;
 	padding:2.7% 2.2%;
@@ -108,8 +111,9 @@ img{
 	font-weight:bold;
 	background-repeat:no-repeat;	
 	background-position:95% 50%;
-	background-image:url('img/group.png');
 }
+
+
 
 #withcenter-video-chat form.class-room input#start-to-join{
 	border:0;

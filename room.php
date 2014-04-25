@@ -1,34 +1,41 @@
 <?php
+	if ( strpos($in['user_name'], ' ') ) {
+		return jsBack( lang("No space allowed in user name") );
+	}
+	
+	$img = x::url_theme() . '/img';
 	date_default_timezone_set('Asia/Seoul');
 	error_reporting( E_ALL ^ E_NOTICE );
 ?>
-<!doctype html>
-<html>
-<head>
-	<title>Withcenter Video Chat</title>
-	<meta charset='utf-8'>
-	<meta name='viewport' content='width=device-width, user-scalable=no'>
-	<!--[if lt IE 9]>
-		<script type='text/javascript' src='//code.jquery.com/jquery-1.11.0-beta3.js'></script>
-	<![endif]-->
-	<!--[if gte IE 9]><!-->
-		<script type='text/javascript' src='//code.jquery.com/jquery-2.1.0-beta3.js'></script>
-	<!--<![endif]-->
-</head>
-<body>
+
 <script src="https://ontue.com/~videochatserver/video-chat-server.js"></script>
 <!--link rel="stylesheet" href="https://ontue.com/~videochatserver/basic.css"-->
-<link rel="stylesheet" href="custom_room.css">
+<link rel="stylesheet" href="<?=x::url_theme()?>/css/room.css">
 <script>
+/**
+ *  @warning The code below is necessary.
+ *  @warning 아래의 코드는 필수적으로 사용되는 코드입니다.
+ */
 $(function(){
 	x_enter_room(
 		 {
 			'room_name' : "<?=$_GET['room_name']?>",
-			'user_name' : '',
+			'user_name' : '<?=$_GET['user_name']?>',
 			'perspective' : null,
-			 'whiteboard' : false
+			 'whiteboard' : true
 		}
-	);		
+	);
+});
+</script>
+<script>
+/**
+ *  @note the code below is option.
+ *  @note 아래의 코드(들)는 옵션입니다. 보기 좋게 하기 위해서 꾸미는 것입니다.
+ */
+$(function(){
+	
+	
+	var url_home = "<?=g::url()?>";
 	var enablevid = true;
 	var enablemic = true;
 	
@@ -39,8 +46,7 @@ $(function(){
 	$('.room-settings').click(function(){
 		$('.room-settings .triangle').toggle();
 		$('.room-settings-content').toggle();
-	});		
-	
+	});
 	setInterval(function(){
 		if( $('.slot').length ){	
 			$('#chat-box').show();			
@@ -117,24 +123,24 @@ $(function(){
 	$('.do-command').click(function(){
 		command_class = $(this).prop('class');
 		
-		if( command_class == 'do-command leave' ){			
-			
+		if ( command_class == 'do-command leave' ) {
+			location.href = url_home;
 		}
 		else if ( command_class == 'do-command camera on' || command_class == 'do-command camera off'){		
-			/*
-			*The code below is supposed to be the code created by easyrtc, but the easyrtc.js has a wrong function reference.
-			"easyrtc.enableCamera(enable);"
-			'enable' is a boolean variable.
-			*The reference problem is already noticed by the easyrtc programmers(at around 20 days ago) 
-			*but is still not updated in version 1.0.7 (Because this update happened at around a month ago)
-			*So I temporarily copied the function and made use of it like given below.
-			*The code is the same when disabling/muting the audio tracks.
-			*/
+			
+			// The code below is supposed to be the code created by easyrtc, but the easyrtc.js has a wrong function reference.
+			// "easyrtc.enableCamera(enable);"
+			// 'enable' is a boolean variable.
+			// The reference problem is already noticed by the easyrtc programmers(at around 20 days ago) 
+			// but is still not updated in version 1.0.7 (Because this update happened at around a month ago)
+			// So I temporarily copied the function and made use of it like given below.
+			// The code is the same when disabling/muting the audio tracks.
+			//
 
-			/*this function makes your self video freeze(chrome) or black screen(Firefox) 
-			*Clients connected with you will see your video in black screen.
-			*THIS IS DONE BY DISABLING THE VIDEO TRACKS THAT IS CONSTANTLY AND CONTINUOUSLY SENT TO CONNECTED PEERS
-			*/	
+			// this function makes your self video freeze(chrome) or black screen(Firefox) 
+			// Clients connected with you will see your video in black screen.
+			// THIS IS DONE BY DISABLING THE VIDEO TRACKS THAT IS CONSTANTLY AND CONTINUOUSLY SENT TO CONNECTED PEERS
+			
 			$('.tooltip').hide();	
 			$('.tip').hide();
 			$('.do-command.camera .tooltip').show();			
@@ -192,23 +198,35 @@ $(function(){
 		$('.room-settings .triangle').toggle();
 		$('.room-settings-content').toggle();
 	});
+	
 });
 
 /**
  *  @param id is your rtc_id. if you want to do with your video, then you can use it.
  */
 var ids = {};
+/** @short shows your name.
+ *  
+ */
 function callback_connected( id, name )
 {
 	$('.loader').slideUp();
-	$("[rtc_id='"+id+"']").parent().find('.name').text( "You" );
+	if ( name.charAt(0) == '-' && name.charAt(1) == '-' ) {
+		name = "No name";
+	}
+	$("[rtc_id='"+id+"']").parent().find('.name').text( "You : " + name );
 }
+/** @short displays 
+ *  
+ */
 var count_other = 0;
 function callback_new_user( id, name )
 {
 	count_other ++;
-	var name = "Other " + count_other;
-	ids[ id ] = name;	
+	if ( name.charAt(0) == '-' && name.charAt(1) == '-' ) {
+		name = "Other " + count_other;
+	}
+	ids[ id ] = name;
 	
 	$("[rtc_id='"+id+"']").parent().find('.name').text( name );
 }
@@ -216,22 +234,21 @@ function callback_chat_message_received(id, message )
 {
 	$("[rtc_id='"+id+"']").find('.name').text( ids[ id ] );	
 }
-
-
-
 </script>
+
+
 <?php
 	$homeURL = './';
 ?>
 <div id='content'>
 <div class='headerfield'>
 	<div id='withcenter-vc-header'>
-			<div class='icon'><a href='<?=$homeURL?>'><img src='img/icon.png'></a></div>
+			<div class='icon'><a href='<?=$homeURL?>'><img src='<?=$img?>/icon.png'></a></div>
 			<div class='menu'>
-				<a href='<?=$homeURL?>' class='link home'><img src='img/home.png'>HOME</a>
-				<a href='#' class='link about'><img src='img/about.png'>ABOUT</a>
-				<a href='#' class='link terms'><img src='img/terms.png'>TERMS</a>
-				<a href='#' class='link support'><img src='img/support.png'>SUPPORT</a>
+				<a href='<?=$homeURL?>' class='link home'><img src='<?=$img?>/home.png'>HOME</a>
+				<a href='#' class='link about'><img src='<?=$img?>/about.png'>ABOUT</a>
+				<a href='#' class='link terms'><img src='<?=$img?>/terms.png'>TERMS</a>
+				<a href='#' class='link support'><img src='<?=$img?>/support.png'>SUPPORT</a>
 			</div>
 	</div>
 </div>
@@ -241,7 +258,7 @@ function callback_chat_message_received(id, message )
 			<?=$_GET['room_name']?>
 			</div>
 			<div class='room-settings'>
-			<img src='img/settings.png'>
+			<img src='<?=$img?>/settings.png'>
 			<div class='triangle'></div>
 			<div class='room-settings-content'>				
 				<div class='do-command leave'><div class='tooltip'><div class='triangle'></div><div class='tip'>Leave Conversation</div></div></div>
@@ -276,7 +293,7 @@ function callback_chat_message_received(id, message )
 		</div>
 		
 		<div class='loader'>
-			<img src='img/loader.gif'>
+			<img src='<?=$img?>/loader.gif'>
 			Loading ...
 		</div>
 				
