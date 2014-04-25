@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+	<title>Withcenter Video Chat</title>
+	<meta charset='utf-8'>
+	<!--[if lt IE 9]>
+		<script type='text/javascript' src='http://code.jquery.com/jquery-1.11.0-beta3.js'></script>
+	<![endif]-->
+	<!--[if gte IE 9]><!-->
+		<script type='text/javascript' src='http://code.jquery.com/jquery-2.1.0-beta3.js'></script>
+	<!--<![endif]-->
+</head>
+<body>
+<script src="https://ontue.com/~videochatserver/video-chat-server.js"></script>
+<link rel="stylesheet" href="https://ontue.com/~videochatserver/basic.css">
+<script>
+$(function(){
+	 $('form.class-room').submit(function(){
+    	x_enter_room(
+        	 {
+            	'room_name' : $("[name='vc_name']").val(),
+            	'user_name' : 'username',
+            	'perspective' : null,
+            	 'whiteboard' : false
+        	}
+    	);
+    	return false;
+	});
+});
+</script>
+<form class='class-room'>
+ 회의실 이름 :
+	<input type='text' name='vc_name' value=''>
+	<input type='submit' value='회의실 입장'>
+</form>
+<div id='video-chat'></div>
+</body>
+</html>
+

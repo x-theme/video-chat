@@ -1,0 +1,281 @@
+body {
+	margin:0;
+	padding:0;	
+}
+
+img{
+	border:0;
+}
+
+/*****FOR INDEX.HTML*****/
+#withcenter-video-chat{	
+	background:url('img/background.png');
+}
+
+#withcenter-video-chat .headerfield{	
+	background-color:#bed2d9;
+}
+
+#withcenter-video-chat #withcenter-vc-header{
+	width:90%;
+	max-width:960px;
+	height:125px;
+	background-color:#bed2d9;
+	position:relative;
+	margin-bottom:10px;
+}
+
+#withcenter-video-chat #withcenter-vc-header .icon{		
+	position:absolute;
+	top:31px;
+	left:34px;	
+}
+
+#withcenter-video-chat #withcenter-vc-header .menu{
+	text-align:right;		
+	width:100%;
+	padding:80px 0 0 0;
+	
+}
+#withcenter-video-chat #withcenter-vc-header .menu a{
+	color: #ffffff;
+	text-decoration:none;
+	font-size:15px;
+	font-family: arial;	
+	position:relative;	
+}
+
+#withcenter-video-chat #withcenter-vc-header .menu a.home{
+	margin-right: 35px;
+}
+
+#withcenter-video-chat #withcenter-vc-header .menu a.about{
+	margin-right: 33px;
+}
+
+#withcenter-video-chat #withcenter-vc-header .menu a.terms{
+	margin-right: 27px;
+}
+
+#withcenter-video-chat #withcenter-vc-header .menu a.support{
+	margin-right: 43px;
+}
+
+#withcenter-video-chat #withcenter-vc-header .menu a img{
+	position:absolute;
+	bottom: 30px;	
+}
+
+#withcenter-video-chat #withcenter-vc-header .menu a.home img{
+	left:11px
+}
+
+#withcenter-video-chat #withcenter-vc-header .menu a.about img{
+	left:13px
+}
+
+#withcenter-video-chat #withcenter-vc-header .menu a.terms img{
+	left:15px
+}
+
+#withcenter-video-chat #withcenter-vc-header .menu a.support img{
+	left:24px;
+}
+/******LOGIN*******/
+#withcenter-video-chat form.class-room{	
+	width:90%;
+	max-width:397px;
+	max-height:100px;
+	margin:83px 0 11px 0;
+	background-color:#96b2bc;	
+	position:relative;
+	padding:2.2% .4% 2.42% .4%;
+}
+
+#withcenter-video-chat form.class-room input{
+	display:block;	
+	padding:0;
+	margin:0;
+}
+
+#withcenter-video-chat form.class-room input#input-room-name{	
+	width:81.8%;
+	border:1px solid #697c83;
+	padding:2.7% 2.2%;
+	margin-bottom:15px;
+	font-size:16px;
+	color:#bed2d9;
+	font-weight:bold;
+	background-repeat:no-repeat;	
+	background-position:95% 50%;
+	background-image:url('img/group.png');
+}
+
+#withcenter-video-chat form.class-room input#start-to-join{
+	border:0;
+	width:86.8%;	
+	padding:3.2% 0 2% 0;
+	font-size:19px;
+	color:#96b2bc;
+	font-family:arial;
+	background-color:#ecf1f2;
+}
+
+::-webkit-input-placeholder {
+    color: #bed2d9;	
+	font-weight:bold;
+}
+/**********************/
+/*******GET PRO******/
+
+#withcenter-video-chat #get-pro-box-container{
+	width:90%;
+	max-width:406px;
+	margin-bottom:84px;	
+}
+
+#withcenter-video-chat #get-pro-box-container  td{
+	width:31%;
+}
+
+#withcenter-video-chat #get-pro-box-container .get-pro-box{	
+	max-width: 112px;
+	height:189px;	
+	background-color:#ecf1f2;		
+	position:relative;
+	padding:9.6%;
+	font-family:arial;	
+}
+
+#withcenter-video-chat #get-pro-box-container .space{
+	width:2.5%;
+}
+
+#withcenter-video-chat #get-pro-box-container .get-pro-box .img-holder{
+	width:60%;	
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#withcenter-video-chat #get-pro-box-container .get-pro-box .img-holder img{
+	width:100%;
+}
+
+#withcenter-video-chat #get-pro-box-container .easy-to-use .img-holder, #withcenter-video-chat #get-pro-box-container .free-to-use .img-holder{	
+	margin-top:12.5%;	
+}
+
+#withcenter-video-chat #get-pro-box-container .fun-to-use .img-holder{	
+	margin-top:22.5%;
+}
+
+#withcenter-video-chat #get-pro-box-container .get-pro-box .text{
+	position:absolute;	
+	bottom:4.4%;
+}
+
+#withcenter-video-chat #get-pro-box-container .get-pro-box .text span{
+	display:block;	
+}
+
+#withcenter-video-chat #get-pro-box-container .get-pro-box .text .title{
+	font-size:13.5px;
+	font-weight:bold;
+	color:#626363;
+	margin-bottom:3px;
+}
+
+#withcenter-video-chat #get-pro-box-container .get-pro-box .text .description{
+	font-size:10px;
+	color:#4d4d4d;
+	margin-bottom:13px;
+}
+
+#withcenter-video-chat #get-pro-box-container .get-pro-box .text .get-pro{
+	display:block;
+	font-size:13px;
+	padding:5.4% 0 5.7% 0;
+	width:92.5%;
+	text-decoration:none;
+	color:#fbfcfd;
+	background-color:#bed2d9;
+	text-align:center;
+}
+/*********************/
+#withcenter-video-chat .footer{
+	font-size: 10px;
+	color:#bdbdbd;
+	padding-bottom:19px;
+	font-family:dotum;
+}
+/*********************/
+
+@media (max-width: 46.25em) {
+  #withcenter-video-chat #withcenter-vc-header .icon{	
+	left:15px;
+	}
+  
+  #withcenter-video-chat #withcenter-vc-header .icon img{	
+	width:100%;	
+	}
+  
+  #withcenter-video-chat #withcenter-vc-header .menu a.link{
+	margin:5px;
+	}
+}
+
+@media ( max-width: 37.5em ) {
+	#withcenter-video-chat #withcenter-vc-header .icon{	
+		width:243px;				
+		top:20%;
+		left:23%;
+	}
+	
+	#withcenter-video-chat #withcenter-vc-header .menu {
+		display:none;
+	}
+}
+@media ( max-width: 31.125em ) {
+	#withcenter-video-chat #withcenter-vc-header .icon{	
+		width:243px;				
+		top:20%;
+		left:20%;
+	}
+}
+@media ( max-width: 28.75em ) {
+	#withcenter-video-chat #withcenter-vc-header .icon{	
+		left:18%;		
+	}		
+}
+
+@media ( max-width: 25em ) {
+	#withcenter-video-chat #withcenter-vc-header .icon{
+		left:14%;
+	}		
+}
+
+@media ( max-width: 23.125em ) {
+	#withcenter-video-chat #withcenter-vc-header .icon{
+		left:12%;
+	}		
+}
+
+@media ( max-width: 20em ) {
+	#withcenter-video-chat #withcenter-vc-header .icon{
+		top:25%;
+		left:9%;
+		width:220px;
+	}		
+}
+
+@media ( max-width: 18.125em ) {
+	#withcenter-video-chat #withcenter-vc-header .icon{
+		left:5%;
+	}		
+}
+
+@media ( max-width: 16.875em ) {
+	#withcenter-video-chat #withcenter-vc-header .icon{
+		left:2%;
+	}		
+}
