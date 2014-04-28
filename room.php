@@ -14,17 +14,24 @@
 /**
  *  @warning The code below must be set proper media server.
  *  @warning 아래의 설정은 미디어 서버를 지정하는 것입니다. 올바른 미디어 서버 주소를 입력하셔야 합니다.
+ *  이 값은 관리자 페이지에서 설정을 할 수 있으며, 기본적으로 ontue.com 의 서버를 빌려서 씁니다.
+ *  이 ontue.com 는 임시적인 것으로 언제든지 서비스를 중단할 수 있으므로 직접 미디어 서버 설정을 하여야 합니다.
  */
 var $url_node_server	= "<?=$url_node_media_server?>";
 </script>
 <script src="<?=x::url()?>/module/video-chat-server/video-chat-server.js"></script>
 <!--link rel="stylesheet" href="<?=x::url()?>/module/video-chat-server/basic.css"-->
+<?/*
+	아래의 두 CSS 파일은 옵션입니다.
+	화면을 좀 더 잘 보이도록 스타일을 지정해 주는 것 뿐입니다.
+*/?>
 <link rel="stylesheet" href="<?=x::url_theme()?>/css/room.css">
 <link rel="stylesheet" href="<?=x::url_theme()?>/css/whiteboard.css">
 <script>
 /**
  *  @warning The code below is necessary.
- *  @warning 본 항목의 코드는 필수입니다.
+ *  @warning 아래의 코드는 필수입니다.
+ *  필수 코드는 $url_node_server 변수와 x_enter_room() 함수 두개 뿐입니다. 나머지는 옵션입니다.
  */
 $(function(){
 	x_enter_room(
