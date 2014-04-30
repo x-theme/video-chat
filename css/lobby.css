@@ -247,7 +247,7 @@ img{
 }
 /*********************/
 
-@media (max-width: 46.25em) {
+@media (max-width: 48.75em) {
   #withcenter-video-chat #withcenter-vc-header .icon{	
 	left:15px;
 	}
@@ -261,7 +261,7 @@ img{
 	}
 }
 
-@media ( max-width: 37.5em ) {
+@media ( max-width: 42.5em ) {
 	#withcenter-video-chat #withcenter-vc-header .icon{	
 		width:243px;				
 		top:20%;
