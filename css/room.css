@@ -489,7 +489,7 @@ img{
 }
 
 
-@media (max-width: 40.8em) {
+@media (max-width: 45em) {
   #content #withcenter-vc-header .icon{	
 	left:0;
 	width:243px;
@@ -504,7 +504,7 @@ img{
 	}
 }
 
-@media ( max-width: 37.5em ) {
+@media ( max-width: 41.25em ) {
 	#content #withcenter-vc-header .icon{	
 		width:243px;
 		top:20%;
