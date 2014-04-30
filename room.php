@@ -20,6 +20,7 @@
 var $url_node_server	= "<?=$url_node_media_server?>";
 </script>
 <script src="<?=x::url()?>/module/video-chat-server/video-chat-server.js"></script>
+<script src="<?=x::url_theme('js/theme.js')?>" /></script>
 <!--link rel="stylesheet" href="<?=x::url()?>/module/video-chat-server/basic.css"-->
 <?/*
 	아래의 두 CSS 파일은 옵션입니다.
@@ -89,7 +90,7 @@ $(function(){
 		$('.left-command').toggle();
 	});	
 	
-	$("[type='submit']").val('');
+	$(".chat [type='submit']").val('');
 	
 	$('.do-command').mouseover(function(){		
 		tooltip_command_class = $(this).prop('class');
@@ -275,7 +276,27 @@ function callback_chat_message_received(id, message )
 				<a href='#' class='link about'><img src='<?=$img?>/about.png'>ABOUT</a>
 				<a href='#' class='link terms'><img src='<?=$img?>/terms.png'>TERMS</a>
 				<a href='#' class='link support'><img src='<?=$img?>/support.png'>SUPPORT</a>
+			<?
+			if ( login() ) {
+				$login_note = 'LOG OUT';
+				$log_url = url_bbs()."/logout.php";				
+				$login_class = 'logged_in';
+			}
+			else{ 
+				$login_note = 'LOG IN';
+				$login_class = 'not_logged_in';
+				$log_url = "javascript:void(0)";
+			}
+			?>
+				<a href='<?=$log_url?>' class='link log <?=$login_class?>'><img src='<?=$img?>/log_icon.png'><?=$login_note?></a>					
 			</div>
+			<div class='login_triangle <?=$login_class?>'></div>
+			<div class='drop_down_login <?=$login_class?>'>
+				<?
+					include widget( array( 'code' => 'login-video-chat', 'name' => 'login-video-chat' ) );
+				?>
+			</div>
+			
 	</div>
 </div>
 	<div id='withcenter-room'>

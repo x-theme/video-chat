@@ -59,6 +59,10 @@ img{
 	margin-right: 27px;
 }
 
+#content #withcenter-vc-header .video_chat_menu a.support{
+	margin-right: 15px;
+}
+
 #content #withcenter-vc-header .video_chat_menu a img{
 	position:absolute;
 	bottom: 30px;	
@@ -78,6 +82,38 @@ img{
 
 #content #withcenter-vc-header .video_chat_menu a.support img{
 	left:24px;
+}
+
+#content #withcenter-vc-header .video_chat_menu a.log.not_logged_in img{
+	left:10px;
+}
+
+#content #withcenter-vc-header .video_chat_menu a.log.logged_in img{
+	left:18px;
+}
+
+
+#content #withcenter-vc-header .login_triangle{
+	position:absolute;
+	right:20px;
+	top:130px;
+	width: 0; 
+	height: 0; 
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;	
+	border-bottom: 10px solid #96b2bc;
+	z-index:999;
+	
+	display:none;
+}
+
+#content #withcenter-vc-header .drop_down_login{
+	position:absolute;
+	right:0;
+	top:140px;	
+	z-index:999;
+	
+	display:none;
 }
 
 #content #withcenter-room{
