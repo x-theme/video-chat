@@ -36,7 +36,7 @@ img{
 #withcenter-video-chat #withcenter-vc-header .video_chat_menu{
 	text-align:right;		
 	width:100%;
-	padding:80px 0 0 0;
+	padding:80px 0 0 0;	
 	
 }
 #withcenter-video-chat #withcenter-vc-header .video_chat_menu a{
@@ -60,7 +60,7 @@ img{
 }
 
 #withcenter-video-chat #withcenter-vc-header .video_chat_menu a.support{
-	margin-right: 43px;
+	margin-right: 20px;
 }
 
 #withcenter-video-chat #withcenter-vc-header .video_chat_menu a img{
@@ -83,7 +83,39 @@ img{
 #withcenter-video-chat #withcenter-vc-header .video_chat_menu a.support img{
 	left:24px;
 }
-/******LOGIN*******/
+
+#withcenter-video-chat #withcenter-vc-header .video_chat_menu a.log.not_logged_in img{
+	left:10px;
+}
+
+#withcenter-video-chat #withcenter-vc-header .video_chat_menu a.log.logged_in img{
+	left:18px;
+}
+
+#withcenter-video-chat #withcenter-vc-header .login_triangle{
+	position:absolute;
+	right:20px;
+	top:130px;
+	width: 0; 
+	height: 0; 
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;	
+	border-bottom: 10px solid #96b2bc;
+	z-index:999;
+	
+	display:none;
+}
+
+#withcenter-video-chat #withcenter-vc-header .drop_down_login{
+	position:absolute;
+	right:0;
+	top:140px;	
+	z-index:999;
+	
+	display:none;
+}
+
+/******join room*******/
 #withcenter-video-chat form.class-room{	
 	width:90%;
 	max-width:397px;
@@ -123,6 +155,7 @@ img{
 	color:#96b2bc;
 	font-family:arial;
 	background-color:#ecf1f2;
+	cursor:pointer;
 }
 
 ::-webkit-input-placeholder {

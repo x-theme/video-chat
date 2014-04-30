@@ -2,6 +2,7 @@
 	$img = x::url_theme() . '/img';
 ?>
 <link rel="stylesheet" href="<?=x::url_theme()?>/css/lobby.css">
+<script src="<?=x::url_theme('js/theme.js')?>" /></script>
 
 <center>
 	<div id='withcenter-video-chat'>
@@ -13,6 +14,25 @@
 					<a href='#' class='link about'><img src='<?=$img?>/about.png'><?=lang("ABOUT")?></a>
 					<a href='#' class='link terms'><img src='<?=$img?>/terms.png'><?=lang("TERMS")?></a>
 					<a href='#' class='link support'><img src='<?=$img?>/support.png'><?=lang("SUPPORT")?></a>
+				<?
+				if ( login() ) {
+					$login_note = 'LOG OUT';
+					$log_url = url_bbs()."/logout.php";				
+					$login_class = 'logged_in';
+				}
+				else{ 
+					$login_note = 'LOG IN';
+					$login_class = 'not_logged_in';
+					$log_url = "javascript:void(0)";
+				}
+				?>
+					<a href='<?=$log_url?>' class='link log <?=$login_class?>'><img src='<?=$img?>/log_icon.png'><?=$login_note?></a>					
+				</div>
+				<div class='login_triangle <?=$login_class?>'></div>
+				<div class='drop_down_login <?=$login_class?>'>
+					<?
+						include widget( array( 'code' => 'login-video-chat', 'name' => 'login-video-chat' ) );
+					?>
 				</div>
 			</div>
 	</div>	
